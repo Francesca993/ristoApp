@@ -1,8 +1,10 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
 import Figurina from "./Figurina";
+import Row from "react-bootstrap/esm/Row";
+import Button from "react-bootstrap/Button";
 
-export default function Content() {
+export default function ContentMenu() {
   let primi = [
     {
       nome: "Spaghetti alla Carbonara",
@@ -59,6 +61,15 @@ export default function Content() {
 
   return (
     <Container>
+      <Row className="d-flex flex-wrap align-items-center justify-content-between text-center p-3 m-2 ">
+        <h1>La proposta culinaria del nostro ristorante</h1>
+        <div>
+          <Button variant="outline-secondary">I nostri Antipasti</Button>{" "}
+          <Button variant="outline-secondary">Primi Piatti</Button>{" "}
+          <Button variant="outline-secondary">Secondi&Contorni</Button>{" "}
+          <Button variant="outline-secondary">La carta dei Vini</Button>{" "}
+        </div>
+      </Row>
       <Figurina primiPiatti={primi} />
     </Container>
   );
