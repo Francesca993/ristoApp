@@ -7,8 +7,8 @@ import Card from "react-bootstrap/Card";
 export default function Card(props) {
   return (
     <Row>
-      {props.piatti.map((piatto) => {
-        <Col>
+      {props.piatti.map((piatto, i) => (
+        <Col key={i}>
           <Card style={{ width: "18rem" }}>
             <Card.Img variant="top" src="https://picsum.photos/200/300" />
             <Card.Body>
@@ -16,8 +16,8 @@ export default function Card(props) {
               <Card.Text>{piatto.descrizione}</Card.Text>
             </Card.Body>
           </Card>
-        </Col>;
-      })}
+        </Col>
+      ))}
     </Row>
   );
 }

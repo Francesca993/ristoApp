@@ -1,12 +1,12 @@
 import React from "react";
 import menuplates from "./assets/menuplates.json";
-import Card from "./Card";
 import Container from "react-bootstrap/Container";
+import MyCard from "./MyCard";
 
 export default function Content() {
   return (
     <Container>
-      <Card piatti={menuplates} />
+      <MyCard piatti={menuplates} />
     </Container>
   );
 }
