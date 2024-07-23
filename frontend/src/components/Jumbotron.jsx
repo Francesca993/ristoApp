@@ -1,5 +1,6 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Button from "react-bootstrap/Button";
 
 export default function Jumbotron() {
   return (
@@ -14,9 +15,12 @@ export default function Jumbotron() {
             godere di una cucina di altissimo livello e di un servizio in sala
             attento alle esigenze più esclusive.
           </p>
-          <button class="btn btn-primary btn-lg" type="button">
-            Guarda il menu
-          </button>
+          <Button variant="outline-secondary" size="lg">
+            Guarda il menù
+          </Button>{" "}
+          <Button variant="outline-secondary" size="lg">
+            Fai una prenotazione
+          </Button>{" "}
         </div>
       </div>
     </div>
