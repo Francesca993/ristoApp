@@ -9,3 +9,7 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+#bkgNavbar {
+  background-color: rgb(250, 101, 71);
+}

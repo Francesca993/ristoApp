@@ -10,21 +10,25 @@ export default function ContentMenu() {
       nome: "Carpaccio di Scampi con Agrumi e Caviale",
       descrizione:
         "Delicati scampi freschi affettati sottilmente, marinati con un'emulsione di agrumi e guarniti con perle di caviale per un tocco di lusso.",
+      immagine: "./src/assets/immaginiPiatti/Uovo.webp",
     },
     {
       nome: "Tartare di Manzo Wagyu con Tuorlo Marinato e Tartufo Nero",
       descrizione:
         "Tartare di manzo Wagyu finemente tritata, arricchita da un tuorlo d'uovo marinato, scaglie di tartufo nero e una delicata emulsione di senape.",
+      immagine: "./src/assets/immaginiPiatti/AntipastoDue.webp",
     },
     {
       nome: "Fagottini di Capesante con Crema di Piselli e Menta",
       descrizione:
         "Fagottini di pasta fresca ripieni di capesante e ricotta, serviti su una vellutata crema di piselli e menta, con un tocco di zeste di limone per freschezza.",
+      immagine: "./src/assets/immaginiPiatti/AntipastoTre.webp",
     },
     {
       nome: "Terrina di Foie Gras con Gelatina di Sauternes e Noci Caramellate",
       descrizione:
         "Foie gras d'anatra servito in una terrina, accompagnato da una delicata gelatina al Sauternes e croccanti noci caramellate, un connubio di sapori dolci e salati.",
+      immagine: "./src/assets/immaginiPiatti/Antipasto4.webp",
     },
   ];
 
@@ -84,11 +88,13 @@ export default function ContentMenu() {
       nome: "Contorno: Patate Fondenti al Timo e Aglio",
       descrizione:
         "Patate tagliate a cubetti e cotte lentamente nel burro e brodo, fino a diventare fondenti, profumate con timo fresco e aglio.",
+      immagine: "./src/assets/immaginiPiatti/PatateArrosto.jpg",
     },
     {
       nome: "Contorno: Asparagi Grigliati con Scaglie di Parmigiano e Riduzione di Balsamico",
       descrizione:
         "Asparagi freschi grigliati, conditi con scaglie di Parmigiano Reggiano e un tocco di riduzione di aceto balsamico per un equilibrio di sapori dolci e salati.",
+      immagine: "./src/assets/immaginiPiatti/Contorno.webp",
     },
   ];
 
@@ -97,51 +103,61 @@ export default function ContentMenu() {
       nome: "Château Margaux",
       descrizione:
         "Un Bordeaux Premier Grand Cru Classé noto per la sua eleganza e complessità. Offre aromi di cassis, violetta, tabacco e cedro, con tannini setosi e una lunga persistenza.",
+      immagine: "./src/assets/immaginiPiatti/PinotNero.webp",
     },
     {
       nome: "Sassicaia - Tenuta San Guido",
       descrizione:
         "Un iconico Super Tuscan prodotto a Bolgheri, Italia. Questo blend di Cabernet Sauvignon e Cabernet Franc è conosciuto per i suoi aromi di frutti neri, erbe aromatiche, e una struttura tannica fine.",
+      immagine: "./src/assets/immaginiPiatti/Rosso.webp",
     },
     {
       nome: "Domaine de la Romanée-Conti Échézeaux",
       descrizione:
         "Un prestigioso Pinot Noir dalla Borgogna, con note di ciliegia, lampone, spezie e sottobosco. È un vino raffinato con una texture setosa e un finale persistente.",
+      immagine: "./src/assets/immaginiPiatti/AngeloNegro.webp",
     },
     {
       nome: "Opus One",
       descrizione:
         "Un Cabernet Sauvignon della Napa Valley, realizzato in collaborazione tra Robert Mondavi e il Barone Philippe de Rothschild. Offre ricchi aromi di cassis, prugna, cioccolato fondente e tabacco.",
+      immagine: "./src/assets/immaginiPiatti/BruteRose.webp",
     },
     {
       nome: "Chardonnay - Domaine Leflaive Puligny-Montrachet",
       descrizione:
         "Un elegante Chardonnay della Borgogna, noto per la sua mineralità e complessità. Presenta note di agrumi, mela, burro e nocciola, con una struttura vibrante e un lungo finale.",
+      immagine: "./src/assets/immaginiPiatti/Rosso.webp",
     },
     {
       nome: "Riesling - Egon Müller Scharzhofberger Spätlese",
       descrizione:
         "Un pregiato Riesling della Mosella, Germania, celebre per la sua freschezza e acidità vivace. Ha aromi di frutta a polpa bianca, pietra focaia e leggere note floreali.",
+      immagine: "./src/assets/immaginiPiatti/SoloUva.webp",
     },
     {
       nome: "Amarone della Valpolicella - Dal Forno Romano",
       descrizione:
         "Un vino rosso veneto noto per la sua concentrazione e intensità. Ha ricchi aromi di ciliegia nera, prugna, cioccolato e spezie, con un corpo pieno e tannini morbidi.",
+      immagine: "./src/assets/immaginiPiatti/TestaBianca.webp",
     },
     {
       nome: "Syrah - Penfolds Grange",
       descrizione:
         "Un iconico vino australiano, rinomato per i suoi intensi aromi di frutti di bosco, spezie e cioccolato. È robusto e potente, con un potenziale di invecchiamento eccezionale.",
+      immagine: "./src/assets/immaginiPiatti/VinoTestaRossa.webp",
     },
     {
       nome: "Gewürztraminer - Zind-Humbrecht Clos Windsbuhl",
       descrizione:
         "Un Gewürztraminer dell'Alsazia, noto per i suoi aromi intensi di litchi, rosa, spezie e pepe bianco. Questo vino bianco aromatico è complesso e persistente.",
+      immagine: "./src/assets/immaginiPiatti/TestaBianca.webp",
     },
     {
       nome: "Château d'Yquem",
       descrizione:
         "Un leggendario Sauternes dolce, famoso per i suoi aromi di albicocca, miele, zafferano e vaniglia. Equilibrato da un'acidità vibrante, è considerato uno dei migliori vini da dessert al mondo.",
+      immagine: "./src/assets/immaginiPiatti/VinoUno.webp",
     },
   ];
 

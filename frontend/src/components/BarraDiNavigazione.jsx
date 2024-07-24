@@ -7,7 +7,12 @@ import Button from "react-bootstrap/Button";
 
 export default function BarraDiNavigazione() {
   return (
-    <Navbar expand="lg" className="justify-content-between">
+    <Navbar
+      expand="lg"
+      className="justify-content-between"
+      id="bkgNavbar"
+      sticky="top"
+    >
       <Container>
         <Navbar.Brand href="#home">Qui andrà il logo</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -33,10 +38,12 @@ export default function BarraDiNavigazione() {
         </Navbar.Collapse>
       </Container>
       <Container className="d-flex justify-content-end m-4">
-        <Button variant="light" size="lg">
+        <Button variant="light" size="lg" className="m-2">
           Registrati
         </Button>
-        <Button variant="light">Accedi</Button>{" "}
+        <Button variant="light" className="m-2">
+          Accedi
+        </Button>{" "}
       </Container>
     </Navbar>
   );
