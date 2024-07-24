@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header";
 import Jumbotron from "./components/Jumbotron";
 import ContentMenu from "./components/ContentMenu";
 import PrimaParte from "./components/PrimaParte";
+import BarraDiNavigazione from "./components/BarraDiNavigazione";
 
 function App() {
   return (
     <>
-      <Header />
+      <BarraDiNavigazione />
       <PrimaParte />
       <Jumbotron />
       <ContentMenu />

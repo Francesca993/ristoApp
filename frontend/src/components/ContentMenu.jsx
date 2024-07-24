@@ -1,76 +1,179 @@
-import React from "react";
+import React, { useState } from "react";
 import Container from "react-bootstrap/Container";
 import Figurina from "./Figurina";
 import Row from "react-bootstrap/esm/Row";
 import Button from "react-bootstrap/Button";
 
 export default function ContentMenu() {
-  let primi = [
+  let antipasti = [
     {
-      nome: "Spaghetti alla Carbonara",
-      descrizione: "Spaghetti con pancetta, uova e pecorino romano",
-      prezzo: 12.0,
-    },
-    {
-      nome: "Risotto ai Funghi",
-      descrizione: "Riso Carnaroli con funghi porcini e parmigiano",
-      prezzo: 14.5,
-    },
-    {
-      nome: "Lasagna al Forno",
-      descrizione: "Lasagna con ragù di carne, besciamella e parmigiano",
-      prezzo: 13.0,
-    },
-    {
-      nome: "Penne all'Arrabbiata",
-      descrizione: "Penne con salsa di pomodoro piccante, aglio e peperoncino",
-      prezzo: 10.0,
-    },
-    {
-      nome: "Fettuccine Alfredo",
-      descrizione: "Fettuccine con burro e parmigiano",
-      prezzo: 11.5,
-    },
-    {
-      nome: "Ravioli di Ricotta e Spinaci",
+      nome: "Carpaccio di Scampi con Agrumi e Caviale",
       descrizione:
-        "Ravioli ripieni di ricotta e spinaci con salsa al burro e salvia",
-      prezzo: 13.5,
+        "Delicati scampi freschi affettati sottilmente, marinati con un'emulsione di agrumi e guarniti con perle di caviale per un tocco di lusso.",
     },
     {
-      nome: "Gnocchi al Pesto",
-      descrizione: "Gnocchi di patate con salsa al pesto di basilico",
-      prezzo: 12.0,
+      nome: "Tartare di Manzo Wagyu con Tuorlo Marinato e Tartufo Nero",
+      descrizione:
+        "Tartare di manzo Wagyu finemente tritata, arricchita da un tuorlo d'uovo marinato, scaglie di tartufo nero e una delicata emulsione di senape.",
     },
     {
-      nome: "Tagliatelle al Ragù",
-      descrizione: "Tagliatelle fresche con ragù di carne alla bolognese",
-      prezzo: 14.0,
+      nome: "Fagottini di Capesante con Crema di Piselli e Menta",
+      descrizione:
+        "Fagottini di pasta fresca ripieni di capesante e ricotta, serviti su una vellutata crema di piselli e menta, con un tocco di zeste di limone per freschezza.",
     },
     {
-      nome: "Zuppa di Farro",
-      descrizione: "Zuppa di farro con verdure fresche di stagione",
-      prezzo: 9.0,
-    },
-    {
-      nome: "Orecchiette alle Cime di Rapa",
-      descrizione: "Orecchiette con cime di rapa, aglio e acciughe",
-      prezzo: 11.0,
+      nome: "Terrina di Foie Gras con Gelatina di Sauternes e Noci Caramellate",
+      descrizione:
+        "Foie gras d'anatra servito in una terrina, accompagnato da una delicata gelatina al Sauternes e croccanti noci caramellate, un connubio di sapori dolci e salati.",
     },
   ];
+
+  let primi = [
+    {
+      nome: "Risotto allo Zafferano con Gamberi Rossi e Polvere di Olive Nere",
+      descrizione:
+        "Cremoso risotto allo zafferano, mantecato con burro e Parmigiano Reggiano, arricchito con gamberi rossi freschi e una spolverata di olive nere essiccate.",
+      immagine: "./src/assets/immaginiPiatti/Risotto.webp",
+    },
+    {
+      nome: "Tortelli di Zucca con Burro Nocciola e Salvia Croccante",
+      descrizione:
+        "Tortelli fatti a mano, ripieni di purea di zucca dolce e mostarda di frutta, conditi con burro nocciola e foglie di salvia croccanti.",
+      immagine: "./src/assets/immaginiPiatti/Tortelli.webp",
+    },
+    {
+      nome: "Tagliolini al Tartufo Bianco d'Alba",
+      descrizione:
+        "Tagliolini freschi preparati con uova e farina, serviti con una salsa cremosa al Parmigiano e burro, generosamente guarniti con tartufo bianco d'Alba affettato sottilmente.",
+      immagine: "./src/assets/immaginiPiatti/Tagliolini.webp",
+    },
+    {
+      nome: "Ravioli di Aragosta con Crema di Porri e Caviale Oscietra",
+      descrizione:
+        "Ravioli ripieni di polpa di aragosta, serviti su una vellutata crema di porri, impreziositi da caviale Oscietra e un filo d'olio extravergine d'oliva.",
+      immagine: "./src/assets/immaginiPiatti/Ravioli.webp",
+    },
+  ];
+
+  let secondi = [
+    {
+      nome: "Filetto di Manzo al Vino Rosso con Purea di Topinambur",
+      descrizione:
+        "Tender filetto di manzo cotto al punto giusto, servito con una salsa ridotta al vino rosso e accompagnato da una vellutata purea di topinambur.",
+      immagine: "./src/assets/immaginiPiatti/FilettoManzo.webp",
+    },
+    {
+      nome: "Spigola in Crosta di Sale con Emulsione di Limone e Finocchio",
+      descrizione:
+        "Spigola fresca cotta in crosta di sale per mantenere la succosità, servita con una delicata emulsione di limone e finocchio, e un contorno di verdure di stagione.",
+      immagine: "./src/assets/immaginiPiatti/FilettoBranzino.webp",
+    },
+    {
+      nome: "Anatra Laccata al Miele di Castagno con Riduzione di Frutti di Bosco",
+      descrizione:
+        "Petto d'anatra laccato con miele di castagno, cotto lentamente per esaltare la tenerezza della carne, servito con una riduzione di frutti di bosco.",
+      immagine: "./src/assets/immaginiPiatti/Anatra.webp",
+    },
+    {
+      nome: "Polpo con Crosta di Pistacchio e Crema di Zucchine",
+      descrizione:
+        "Filetto di branzino avvolto in una crosta croccante di pistacchi, adagiato su una leggera crema di zucchine e guarnito con olio di basilico.",
+      immagine: "./src/assets/immaginiPiatti/Polpo.webp",
+    },
+    {
+      nome: "Contorno: Patate Fondenti al Timo e Aglio",
+      descrizione:
+        "Patate tagliate a cubetti e cotte lentamente nel burro e brodo, fino a diventare fondenti, profumate con timo fresco e aglio.",
+    },
+    {
+      nome: "Contorno: Asparagi Grigliati con Scaglie di Parmigiano e Riduzione di Balsamico",
+      descrizione:
+        "Asparagi freschi grigliati, conditi con scaglie di Parmigiano Reggiano e un tocco di riduzione di aceto balsamico per un equilibrio di sapori dolci e salati.",
+    },
+  ];
+
+  let vini = [
+    {
+      nome: "Château Margaux",
+      descrizione:
+        "Un Bordeaux Premier Grand Cru Classé noto per la sua eleganza e complessità. Offre aromi di cassis, violetta, tabacco e cedro, con tannini setosi e una lunga persistenza.",
+    },
+    {
+      nome: "Sassicaia - Tenuta San Guido",
+      descrizione:
+        "Un iconico Super Tuscan prodotto a Bolgheri, Italia. Questo blend di Cabernet Sauvignon e Cabernet Franc è conosciuto per i suoi aromi di frutti neri, erbe aromatiche, e una struttura tannica fine.",
+    },
+    {
+      nome: "Domaine de la Romanée-Conti Échézeaux",
+      descrizione:
+        "Un prestigioso Pinot Noir dalla Borgogna, con note di ciliegia, lampone, spezie e sottobosco. È un vino raffinato con una texture setosa e un finale persistente.",
+    },
+    {
+      nome: "Opus One",
+      descrizione:
+        "Un Cabernet Sauvignon della Napa Valley, realizzato in collaborazione tra Robert Mondavi e il Barone Philippe de Rothschild. Offre ricchi aromi di cassis, prugna, cioccolato fondente e tabacco.",
+    },
+    {
+      nome: "Chardonnay - Domaine Leflaive Puligny-Montrachet",
+      descrizione:
+        "Un elegante Chardonnay della Borgogna, noto per la sua mineralità e complessità. Presenta note di agrumi, mela, burro e nocciola, con una struttura vibrante e un lungo finale.",
+    },
+    {
+      nome: "Riesling - Egon Müller Scharzhofberger Spätlese",
+      descrizione:
+        "Un pregiato Riesling della Mosella, Germania, celebre per la sua freschezza e acidità vivace. Ha aromi di frutta a polpa bianca, pietra focaia e leggere note floreali.",
+    },
+    {
+      nome: "Amarone della Valpolicella - Dal Forno Romano",
+      descrizione:
+        "Un vino rosso veneto noto per la sua concentrazione e intensità. Ha ricchi aromi di ciliegia nera, prugna, cioccolato e spezie, con un corpo pieno e tannini morbidi.",
+    },
+    {
+      nome: "Syrah - Penfolds Grange",
+      descrizione:
+        "Un iconico vino australiano, rinomato per i suoi intensi aromi di frutti di bosco, spezie e cioccolato. È robusto e potente, con un potenziale di invecchiamento eccezionale.",
+    },
+    {
+      nome: "Gewürztraminer - Zind-Humbrecht Clos Windsbuhl",
+      descrizione:
+        "Un Gewürztraminer dell'Alsazia, noto per i suoi aromi intensi di litchi, rosa, spezie e pepe bianco. Questo vino bianco aromatico è complesso e persistente.",
+    },
+    {
+      nome: "Château d'Yquem",
+      descrizione:
+        "Un leggendario Sauternes dolce, famoso per i suoi aromi di albicocca, miele, zafferano e vaniglia. Equilibrato da un'acidità vibrante, è considerato uno dei migliori vini da dessert al mondo.",
+    },
+  ];
+
+  let [type, setType] = useState(primi);
 
   return (
     <Container>
       <Row className="d-flex flex-wrap align-items-center justify-content-between text-center p-3 m-2 ">
         <h1>La proposta culinaria del nostro ristorante</h1>
         <div>
-          <Button variant="outline-secondary">I nostri Antipasti</Button>{" "}
-          <Button variant="outline-secondary">Primi Piatti</Button>{" "}
-          <Button variant="outline-secondary">Secondi&Contorni</Button>{" "}
-          <Button variant="outline-secondary">La carta dei Vini</Button>{" "}
+          <Button
+            variant="outline-secondary"
+            onClick={() => setType(antipasti)}
+          >
+            I nostri Antipasti
+          </Button>{" "}
+          <Button variant="outline-secondary" onClick={() => setType(primi)}>
+            Primi Piatti
+          </Button>{" "}
+          <Button variant="outline-secondary" onClick={() => setType(secondi)}>
+            Secondi&Contorni
+          </Button>{" "}
+          <Button variant="outline-secondary" onClick={() => setType(vini)}>
+            La carta dei Vini
+          </Button>{" "}
+          {type === "secondi" && <Figurina primiPiatti={antipasti} />}
+          {type === "primi" && <Figurina primiPiatti={primi} />}
+          {type === "secondi" && <Figurina primiPiatti={secondi} />}
+          {type === "secondi" && <Figurina primiPiatti={vini} />}
         </div>
       </Row>
-      <Figurina primiPiatti={primi} />
+      <Figurina piatti={type} />
     </Container>
   );
 }
