@@ -1,9 +1,10 @@
 import React from "react";
 import "./App.css";
-import Jumbotron from "./components/Jumbotron";
-import ContentMenu from "./components/ContentMenu";
-import PrimaParte from "./components/PrimaParte";
-import BarraDiNavigazione from "./components/BarraDiNavigazione";
+import Jumbotron from "./components/Jumbotron/Jumbotron";
+import ContentMenu from "./components/menu/ContentMenu";
+import PrimaParte from "./components/Jumbotron/PrimaParte";
+import BarraDiNavigazione from "./components/Navbar/BarraDiNavigazione";
+import SecondoContenuto from "./components/galleryEcommenti/SecondoContenuto";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <PrimaParte />
       <Jumbotron />
       <ContentMenu />
+      <SecondoContenuto />
     </>
   );
 }

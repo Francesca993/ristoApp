@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
+import AreaOrdine from "./AreaOrdine";
 
 export default function SingolaFigurina({ piatto }) {
+  const [selected, setSelected] = useState(false);
+
   return (
     <Col xs="12" md="12" lg="6">
       <Card className="p-3 m-4" style={{ maxWidth: 500 }}>
@@ -17,10 +20,11 @@ export default function SingolaFigurina({ piatto }) {
             backgroundRepeat: "no-repeat",
           }}
         ></div>
-        <Card.Body>
+        <Card.Body onClick={() => setSelected(!selected)}>
           <Card.Title>{piatto.nome}</Card.Title>
           <Card.Text>{piatto.descrizione}</Card.Text>
         </Card.Body>
+        {selected && <AreaOrdine />}
       </Card>
     </Col>
   );
