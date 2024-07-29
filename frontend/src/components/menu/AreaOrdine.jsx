@@ -6,6 +6,7 @@ import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
 export default function AreaOrdine() {
+  const [inputValue, setInputValue] = useState();
   // CREATE (CRUD) -> Funzione per gestire l'aggiunta di un nuovo elemento
   const handleAddItem = () => {
     // Creiamo un nuovo oggetto elemento con il valore dell'input
@@ -23,7 +24,7 @@ export default function AreaOrdine() {
       .then((data) => setItems([...items, data])); // Aggiorniamo la lista degli elementi con il nuovo elemento
 
     // Resettiamo il valore dell'input
-    setInputValue("");
+    setInputValue();
   };
   return (
     <Container>
@@ -36,10 +37,10 @@ export default function AreaOrdine() {
         <Col>
           <Form.Select aria-label="Default select example">
             <option>Quantità</option>
-            <option value={"1"}>1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
+            <option value={inputValue}>1</option>
+            <option value={inputValue}>2</option>
+            <option value={inputValue}>3</option>
+            <option value={inputValue}>4</option>
             <option value="5">5</option>
             <option value="6">6</option>
             <option value="1">7</option>
