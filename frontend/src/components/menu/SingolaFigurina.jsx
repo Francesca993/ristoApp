@@ -24,7 +24,9 @@ export default function SingolaFigurina({ piatto }) {
           <Card.Title>{piatto.nome}</Card.Title>
           <Card.Text>{piatto.descrizione}</Card.Text>
         </Card.Body>
-        {selected && <AreaOrdine />}
+        {selected && (
+          <AreaOrdine piatto={piatto.nome} immagine={piatto.immagine} />
+        )}
       </Card>
     </Col>
   );

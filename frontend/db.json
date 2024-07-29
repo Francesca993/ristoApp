@@ -1,10 +1,34 @@
 {
   "ListaOrdine": [
     {
-      "id": "2fcf"
+      "id": "dc52",
+      "nome": "Risotto allo Zafferano con Gamberi Rossi e Polvere di Olive Nere",
+      "foto": "./src/assets/immaginiPiatti/Risotto.webp"
     },
     {
-      "id": "8ba2"
+      "id": "72e0",
+      "nome": "Risotto allo Zafferano con Gamberi Rossi e Polvere di Olive Nere",
+      "foto": "./src/assets/immaginiPiatti/Risotto.webp"
+    },
+    {
+      "id": "08ca",
+      "nome": "Ravioli di Aragosta con Crema di Porri e Caviale Oscietra",
+      "foto": "./src/assets/immaginiPiatti/Ravioli.webp"
+    },
+    {
+      "id": "b4fd",
+      "nome": "Ravioli di Aragosta con Crema di Porri e Caviale Oscietra",
+      "foto": "./src/assets/immaginiPiatti/Ravioli.webp"
+    },
+    {
+      "id": "456c",
+      "nome": "Tagliolini al Tartufo Bianco d'Alba",
+      "foto": "./src/assets/immaginiPiatti/Tagliolini.webp"
+    },
+    {
+      "id": "15fa",
+      "nome": "Tagliolini al Tartufo Bianco d'Alba",
+      "foto": "./src/assets/immaginiPiatti/Tagliolini.webp"
     }
   ]
 }

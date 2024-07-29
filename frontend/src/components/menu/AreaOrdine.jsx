@@ -5,12 +5,10 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 
-export default function AreaOrdine() {
-  const [inputValue, setInputValue] = useState();
-  // CREATE (CRUD) -> Funzione per gestire l'aggiunta di un nuovo elemento
+export default function AreaOrdine({ piatto, immagine }) {
   const handleAddItem = () => {
     // Creiamo un nuovo oggetto elemento con il valore dell'input
-    const newItem = { name: inputValue };
+    const newItem = { nome: piatto, foto: immagine };
 
     // POST all'API per aggiungere il nuovo elemento
     fetch("http://localhost:5401/ListaOrdine", {
@@ -22,31 +20,25 @@ export default function AreaOrdine() {
     })
       .then((response) => response.json()) // Convertiamo la risposta in formato JSON
       .then((data) => setItems([...items, data])); // Aggiorniamo la lista degli elementi con il nuovo elemento
-
-    // Resettiamo il valore dell'input
-    setInputValue();
   };
+
   return (
     <Container>
       <Row>
         <Col>
-          <Button variant="secondary" onClick={handleAddItem()}>
+          <Button type="submit" variant="secondary" onSubmit={handleAddItem()}>
             Aggiungi al carrello
           </Button>
         </Col>
         <Col>
-          <Form.Select aria-label="Default select example">
-            <option>Quantità</option>
-            <option value={inputValue}>1</option>
-            <option value={inputValue}>2</option>
-            <option value={inputValue}>3</option>
-            <option value={inputValue}>4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="1">7</option>
-            <option value="1">8</option>
-            <option value="1">9</option>
-          </Form.Select>
+          <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Control
+              type="number"
+              placeholder="Quantità"
+              min="1"
+              max="10"
+            />
+          </Form.Group>
         </Col>
       </Row>
     </Container>

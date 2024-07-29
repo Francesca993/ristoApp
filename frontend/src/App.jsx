@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import Jumbotron from "./components/Jumbotron/Jumbotron";
 import ContentMenu from "./components/menu/ContentMenu";
 import PrimaParte from "./components/Jumbotron/PrimaParte";
 import BarraDiNavigazione from "./components/Navbar/BarraDiNavigazione";
@@ -11,7 +10,6 @@ function App() {
     <>
       <BarraDiNavigazione />
       <PrimaParte />
-      <Jumbotron />
       <ContentMenu />
       <SecondoContenuto />
     </>
