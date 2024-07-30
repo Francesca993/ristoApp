@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Button from "react-bootstrap/Button";
+import { NavLink, Link } from "react-router-dom";
 
 export default function BarraDiNavigazione() {
   return (
@@ -14,11 +15,15 @@ export default function BarraDiNavigazione() {
       sticky="top"
     >
       <Container>
-        <Navbar.Brand href="#home">Qui andrà il logo</Navbar.Brand>
+        <Navbar.Brand>
+          <Link to="/">Qui andrà il logo</Link>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
+            <Nav.Link href="#home">
+              <Link to="/"> Home</Link>
+            </Nav.Link>
             <Nav.Link href="#link">Booking&Contatti</Nav.Link>
             <NavDropdown title="Il Nostro Menù" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">Antipasti</NavDropdown.Item>
@@ -32,7 +37,12 @@ export default function BarraDiNavigazione() {
                 La Nostra Carta Dei Vini
               </NavDropdown.Item>
             </NavDropdown>
-            <Nav.Link href="#link">Gallery</Nav.Link>
+            <Nav.Link>
+              <Link to="/gallery">Gallery</Link>
+            </Nav.Link>
+            <Nav.Link>
+              <Link to="/menu">Menù</Link>
+            </Nav.Link>
             <Nav.Link href="#link">FAQ</Nav.Link>
           </Nav>
         </Navbar.Collapse>

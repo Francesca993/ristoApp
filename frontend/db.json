@@ -20,6 +20,20 @@
       "foto": "./src/assets/immaginiPiatti/PinotNero.webp",
       "valore": "",
       "quantity": "8"
+    },
+    {
+      "id": "46ed",
+      "nome": "Carpaccio di Scampi con Agrumi e Caviale",
+      "foto": "./src/assets/immaginiPiatti/Uovo.webp",
+      "valore": "",
+      "quantity": "6"
+    },
+    {
+      "id": "8961",
+      "nome": "Filetto di Manzo al Vino Rosso con Purea di Topinambur",
+      "foto": "./src/assets/immaginiPiatti/FilettoManzo.webp",
+      "valore": "",
+      "quantity": "5"
     }
   ]
 }
