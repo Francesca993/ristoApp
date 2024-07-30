@@ -1,34 +1,25 @@
 {
   "ListaOrdine": [
     {
-      "id": "dc52",
+      "id": "4b9a",
       "nome": "Risotto allo Zafferano con Gamberi Rossi e Polvere di Olive Nere",
-      "foto": "./src/assets/immaginiPiatti/Risotto.webp"
+      "foto": "./src/assets/immaginiPiatti/Risotto.webp",
+      "valore": "",
+      "quantity": "5"
     },
     {
-      "id": "72e0",
+      "id": "6d4a",
       "nome": "Risotto allo Zafferano con Gamberi Rossi e Polvere di Olive Nere",
-      "foto": "./src/assets/immaginiPiatti/Risotto.webp"
+      "foto": "./src/assets/immaginiPiatti/Risotto.webp",
+      "valore": "",
+      "quantity": "6"
     },
     {
-      "id": "08ca",
-      "nome": "Ravioli di Aragosta con Crema di Porri e Caviale Oscietra",
-      "foto": "./src/assets/immaginiPiatti/Ravioli.webp"
-    },
-    {
-      "id": "b4fd",
-      "nome": "Ravioli di Aragosta con Crema di Porri e Caviale Oscietra",
-      "foto": "./src/assets/immaginiPiatti/Ravioli.webp"
-    },
-    {
-      "id": "456c",
-      "nome": "Tagliolini al Tartufo Bianco d'Alba",
-      "foto": "./src/assets/immaginiPiatti/Tagliolini.webp"
-    },
-    {
-      "id": "15fa",
-      "nome": "Tagliolini al Tartufo Bianco d'Alba",
-      "foto": "./src/assets/immaginiPiatti/Tagliolini.webp"
+      "id": "cda8",
+      "nome": "Château Margaux",
+      "foto": "./src/assets/immaginiPiatti/PinotNero.webp",
+      "valore": "",
+      "quantity": "8"
     }
   ]
 }
